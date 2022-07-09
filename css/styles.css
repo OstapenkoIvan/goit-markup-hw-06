@@ -227,7 +227,16 @@ header {
 /* section two */
 
 .hide {
-  display: none;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section-two {
@@ -702,60 +711,56 @@ footer {
   opacity: 0;
 }
 
+/* MODAL WINDOW FORMS */
+
 .backdrop-header {
   font-size: 20px;
   line-height: 1.15;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .form {
   display: flex;
+  position: relative;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
-.backdrop-container {
-  position: relative;
-  margin-top: 4px;
+.backdrop-name {
+  position: absolute;
+  top: -18px;
+  left: 0;
 }
 
 .backdrop-icon {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-  position: absolute;
   fill: currentColor;
 }
 
+.form + .form {
+  margin-top: 28px;
+}
+
 .form:hover .backdrop-icon,
-.form:focus .backdrop-icon {
+.backdrop-input:focus + .backdrop-icon {
   fill: var(--clr-active-1);
 }
 
-.form:hover .backdrop-name,
-.form:focus .backdrop-name {
-  outline: 1px solid var(--clr-active-1);
-}
-
-.backdrop-name:focus {
-  outline: 1px solid var(--clr-active-1);
-}
-
-.form:hover .form input,
-.form:focus .form input {
+.backdrop-input:hover,
+.backdrop-input:focus {
   border: 1px solid #2196f3;
 }
 
-.form label,
-.form input,
-.form textarea {
+.backdrop-item {
   color: var(--clr-font-2);
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
 
-.form input {
+.backdrop-input {
   padding-left: 40px;
   width: 100%;
 }
@@ -764,7 +769,6 @@ footer {
   padding-left: 16px;
   padding-right: 16px;
   resize: none;
-  margin-top: 4px;
   height: 120px;
 }
 
@@ -776,19 +780,38 @@ footer {
   border-radius: 4px;
 }
 
-.form-checkbox {
+.checkbox {
+  display: flex;
   margin-top: 20px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.form-checkbox label {
+.checkbox-span {
   line-height: 1.71;
   color: var(--clr-font-2);
 }
 
-.form-checkbox label a {
+.checkbox-span a {
   color: var(--clr-active-1);
   text-decoration: underline;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--clr-font-1);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--clr-active-1);
+  background-image: url(../images/Vector.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border: transparent;
 }
 
 .form-submit {
