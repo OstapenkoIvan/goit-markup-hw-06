@@ -811,6 +811,7 @@ footer {
   background-image: url(../images/Vector.svg);
   background-size: contain;
   background-origin: border-box;
+  background-repeat: no-repeat;
   border: transparent;
 }
 
