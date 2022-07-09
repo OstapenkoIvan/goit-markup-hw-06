@@ -809,7 +809,7 @@ footer {
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--clr-active-1);
   background-image: url(../images/Vector.svg);
-  background-size: contain;
+  background-position: center;
   background-origin: border-box;
   background-repeat: no-repeat;
   border: transparent;
