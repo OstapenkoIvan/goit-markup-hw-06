@@ -634,7 +634,6 @@ footer {
   letter-spacing: 0.06em;
   margin-left: 24px;
   margin-bottom: 4px;
-  text-transform: uppercase;
 }
 .item-text {
   color: var(--clr-font-2);
