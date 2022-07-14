@@ -10,14 +10,14 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  color: #212121;
+  font-family: $font-2;
+  color: getColor("font-1");
   font-size: 14px;
   position: relative;
 }
 
 a {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-2;
   text-decoration: none;
   color: inherit;
   font-weight: 500;
@@ -43,4 +43,4 @@ h5,
 p,
 li {
   letter-spacing: 0.03em;
-}/*# sourceMappingURL=main.css.map */
+}

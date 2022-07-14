@@ -194,6 +194,13 @@ header {
   padding-bottom: 32px;
 }
 
+.contact__icon {
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline;
+  margin-right: 10px;
+}
+
 .contact__link:hover,
 .contact__link:focus,
 .header__btn a:hover,
@@ -204,13 +211,6 @@ header {
 .contact__link:focus .contact__icon {
   color: var(--clr-active-1);
   fill: var(--clr-active-1);
-}
-
-.contact__icon {
-  vertical-align: middle;
-  fill: currentColor;
-  display: inline;
-  margin-right: 10px;
 }
 
 /* section one */
