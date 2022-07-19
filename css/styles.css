@@ -143,20 +143,23 @@ header {
   color: var(--clr-active-1);
 }
 
-.header__nav {
+.nav {
   display: flex;
   font-weight: 500;
 }
 
-.header__btn,
-.header__btn a {
+.nav__btn {
   position: relative;
+}
+
+.nav__link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   letter-spacing: 0.02em;
 }
 
-.header__btn::after {
+.nav__btn::after {
   content: "";
   position: absolute;
 
@@ -169,20 +172,20 @@ header {
   border-radius: 4px;
 }
 
-.header__btn--active {
+.nav__btn--active {
   color: var(--clr-active-1);
 }
 
-.header__btn.header__btn--active::after {
+.nav__btn--active::after {
   width: 100%;
 }
 
-.header__btn:not(:last-child),
+.nav__btn:not(:last-child),
 .contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts {
+.contact {
   display: flex;
   margin-left: auto;
 }
@@ -203,10 +206,8 @@ header {
 
 .contact__link:hover,
 .contact__link:focus,
-.header__btn a:hover,
-.header__btn a:focus,
-.footer__contact:hover,
-.footer__contact:focus,
+.nav__link:hover,
+.nav__link:focus,
 .contact__link:hover .contact__icon,
 .contact__link:focus .contact__icon {
   color: var(--clr-active-1);
@@ -249,8 +250,7 @@ header {
   background-color: var(--clr-active-1);
 }
 
-.button-hero:hover,
-.footer-subscribe__submit:hover {
+.button-hero:hover {
   background-color: var(--clr-hover-2);
 }
 
@@ -282,7 +282,6 @@ header {
 }
 
 .section-two__title {
-  font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -292,7 +291,9 @@ header {
 .section-two__text {
   line-height: 1.71;
   color: var(--clr-font-2);
-  height: 75px;
+  /* height: 75px; */
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-top: 10px;
 }
 
@@ -309,7 +310,7 @@ header {
   display: flex;
 }
 
-.section-two__images li {
+.section-two__img {
   position: relative;
 }
 
@@ -538,6 +539,16 @@ header {
   background-color: var(--clr-active-1);
 }
 
+.footer-subscribe__submit:hover {
+  background-color: getColor("secondary");
+}
+
+.footer__contact:hover,
+.footer__contact:focus {
+  color: var(--clr-active-1);
+  fill: var(--clr-active-1);
+}
+
 /* Portfolio items */
 
 .portfolio {
@@ -685,7 +696,7 @@ header {
   border-radius: 4px;
 }
 
-.modal__image {
+.modal__close {
   position: absolute;
   display: flex;
   top: 8px;
@@ -702,8 +713,8 @@ header {
   fill: var(--clr-font-1);
 }
 
-.modal__image:hover,
-.modal__image:focus {
+.modal__close:hover,
+.modal__close:focus {
   fill: var(--clr-active-1);
 }
 
@@ -714,7 +725,7 @@ header {
 
 /* MODAL WINDOW FORMS */
 
-.backdrop__header {
+.modal__header {
   font-size: 20px;
   line-height: 1.15;
   margin-bottom: 30px;
